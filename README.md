@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://colab.research.google.com/github/Parth-KG/explainable-vit-chest-xray/blob/main/notebooks/colab_provided_dataset.ipynb">
+  <a href="https://colab.research.google.com/github/Parth-KG/explainable-vit-chest-xray/blob/main/notebook/notebook.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
   </a>
 </p>
