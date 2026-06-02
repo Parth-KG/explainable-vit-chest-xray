@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://colab.research.google.com/github/<YOUR_USERNAME>/<YOUR_REPO>/blob/main/notebooks/colab_provided_dataset.ipynb">
+  <a href="https://colab.research.google.com/github/Parth-KG/explainable-vit-chest-xray/blob/main/notebooks/colab_provided_dataset.ipynb">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open in Colab">
   </a>
 </p>
@@ -162,6 +162,6 @@ Abnar & Zuidema (2020), *Quantifying Attention Flow*; Sundararajan et al. (2017)
 ## Author
 
 **Parth Krishan Goswami** — AIMS-DTU Research Intern 2026 submission.
-Trained weights & figures: `https://drive.google.com/file/d/1nzZghdzlxduhvil0xMVqCumB6bzbtUcf/view?`
+Trained weights & figures: `https://drive.google.com/drive/folders/1AKIQr9OT8aGfAaBGH6ZRdoMhattxomjP?usp=sharing`
 
 <sub>Released for evaluation purposes. Dataset (c) its original authors.</sub>
