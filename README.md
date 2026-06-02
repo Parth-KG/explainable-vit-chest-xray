@@ -162,6 +162,6 @@ Abnar & Zuidema (2020), *Quantifying Attention Flow*; Sundararajan et al. (2017)
 ## Author
 
 **Parth Krishan Goswami** — AIMS-DTU Research Intern 2026 submission.
-Trained weights & figures: `<INSERT GOOGLE DRIVE LINK>`
+Trained weights & figures: `https://drive.google.com/file/d/1nzZghdzlxduhvil0xMVqCumB6bzbtUcf/view?`
 
 <sub>Released for evaluation purposes. Dataset (c) its original authors.</sub>
