@@ -1,0 +1,57 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# ---- Environments ----
+.venv/
+venv/
+env/
+.python-version
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ---- Data ----
+data/
+
+# ---- Run artifacts ----
+outputs/*
+!outputs/*.json
+
+# ---- Model weights ----
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# ---- Logs & experiment tracking ----
+*.log
+runs/
+wandb/
+lightning_logs/
+
+# ---- Secrets & credentials ----
+.env
+.kaggle/
+kaggle.json
+
+# ---- Editors ----
+.idea/
+.vscode/
+*.swp
+
+# ---- macOS ----
+.DS_Store
+._*
+.AppleDouble
+__MACOSX/
+
+# ---- Archives ----
+*.zip
+*.tar.gz

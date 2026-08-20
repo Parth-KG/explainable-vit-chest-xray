@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 468" width="1160" height="468" role="img" aria-label="Faithfulness of three attribution methods across four metrics. Attention-Rollout and Grad-CAM are near-tied; Integrated Gradients leads on insertion but trails badly on AOPC.">
+  <style>
+    .h1   { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size:19px; font-weight:700; }
+    .sub  { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size:13px; }
+    .pt   { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size:14px; font-weight:650; }
+    .pn   { font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; font-size:10px; letter-spacing:0.4px; }
+    .lbl  { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size:12.5px; }
+    .val  { font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; font-size:12px; font-weight:650; }
+    .ax   { font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; font-size:9.5px; letter-spacing:0.3px; }
+    .eyeb { font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; font-size:10px; letter-spacing:2px; }
+    .big  { font-family:ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; font-size:30px; font-weight:700; }
+    .note { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size:12.5px; }
+</style>
+  <rect x="0.75" y="0.75" width="1158.5" height="466.5" rx="16" fill="#0d1117" stroke="#1f2733" stroke-width="1.5"/>
+  <text x="40" y="42" class="eyeb" fill="#4a5765">EXPLAINABLE-VIT-CHEST-XRAY · FAITHFULNESS</text>
+  <text x="40" y="72" class="h1" fill="#e9eff6">Three attribution methods, four metrics — and almost nothing between them</text>
+  <text x="40" y="94" class="sub" fill="#8593a4">Mean over 20 held-out test images, Gaussian-blur baseline. Axis ranges are zoomed and labelled; dots, not bars, so the zoom cannot exaggerate a difference.</text>
+  <text x="40" y="132" class="pt" fill="#e9eff6">Insertion AUC ↑</text>
+  <text x="40" y="149" class="pn" fill="#4a5765">higher is better · confidence recovered as evidence is added back</text>
+  <text x="40" y="182" class="lbl" fill="#8593a4">Attention-Rollout</text>
+  <line x1="192" y1="178" x2="492" y2="178" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="192" y1="178" x2="292.0" y2="178" stroke="#7c5cff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="292.0" cy="178" r="6" fill="#7c5cff"/>
+  <text x="508" y="182" class="val" fill="#8593a4">0.895</text>
+  <text x="40" y="209" class="lbl" fill="#e9eff6">Integrated Gradients</text>
+  <line x1="192" y1="205" x2="492" y2="205" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="192" y1="205" x2="432.0" y2="205" stroke="#22b8cf" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="432.0" cy="205" r="10" fill="none" stroke="#22b8cf" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="432.0" cy="205" r="6" fill="#22b8cf"/>
+  <text x="508" y="209" class="val" fill="#e9eff6">0.902</text>
+  <text x="40" y="236" class="lbl" fill="#8593a4">Grad-CAM</text>
+  <line x1="192" y1="232" x2="492" y2="232" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="192" y1="232" x2="332.0" y2="232" stroke="#f7931e" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="332.0" cy="232" r="6" fill="#f7931e"/>
+  <text x="508" y="236" class="val" fill="#8593a4">0.897</text>
+  <line x1="192" y1="242" x2="492" y2="242" stroke="#242d38" stroke-width="1"/>
+  <text x="192" y="254" class="ax" fill="#4a5765">0.890</text>
+  <text x="492" y="254" class="ax" text-anchor="end" fill="#4a5765">0.905</text>
+  <text x="606" y="132" class="pt" fill="#e9eff6">Deletion AUC ↓</text>
+  <text x="606" y="149" class="pn" fill="#4a5765">lower is better · confidence lost as evidence is removed</text>
+  <text x="606" y="182" class="lbl" fill="#e9eff6">Attention-Rollout</text>
+  <line x1="758" y1="178" x2="1058" y2="178" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="758" y1="178" x2="810.5" y2="178" stroke="#7c5cff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="810.5" cy="178" r="10" fill="none" stroke="#7c5cff" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="810.5" cy="178" r="6" fill="#7c5cff"/>
+  <text x="1074" y="182" class="val" fill="#e9eff6">0.872</text>
+  <text x="606" y="209" class="lbl" fill="#8593a4">Integrated Gradients</text>
+  <line x1="758" y1="205" x2="1058" y2="205" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="758" y1="205" x2="1028.0" y2="205" stroke="#22b8cf" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="1028.0" cy="205" r="6" fill="#22b8cf"/>
+  <text x="1074" y="209" class="val" fill="#8593a4">0.901</text>
+  <text x="606" y="236" class="lbl" fill="#e9eff6">Grad-CAM</text>
+  <line x1="758" y1="232" x2="1058" y2="232" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="758" y1="232" x2="810.5" y2="232" stroke="#f7931e" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="810.5" cy="232" r="10" fill="none" stroke="#f7931e" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="810.5" cy="232" r="6" fill="#f7931e"/>
+  <text x="1074" y="236" class="val" fill="#e9eff6">0.872</text>
+  <line x1="758" y1="242" x2="1058" y2="242" stroke="#242d38" stroke-width="1"/>
+  <text x="758" y="254" class="ax" fill="#4a5765">0.865</text>
+  <text x="1058" y="254" class="ax" text-anchor="end" fill="#4a5765">0.905</text>
+  <text x="40" y="300" class="pt" fill="#e9eff6">Saliency entropy ↓</text>
+  <text x="40" y="317" class="pn" fill="#4a5765">lower is better · how concentrated the map is</text>
+  <text x="40" y="350" class="lbl" fill="#e9eff6">Attention-Rollout</text>
+  <line x1="192" y1="346" x2="492" y2="346" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="192" y1="346" x2="252.0" y2="346" stroke="#7c5cff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="252.0" cy="346" r="10" fill="none" stroke="#7c5cff" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="252.0" cy="346" r="6" fill="#7c5cff"/>
+  <text x="508" y="350" class="val" fill="#e9eff6">0.937</text>
+  <text x="40" y="377" class="lbl" fill="#8593a4">Integrated Gradients</text>
+  <line x1="192" y1="373" x2="492" y2="373" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="192" y1="373" x2="346.3" y2="373" stroke="#22b8cf" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="346.3" cy="373" r="6" fill="#22b8cf"/>
+  <text x="508" y="377" class="val" fill="#8593a4">0.948</text>
+  <text x="40" y="404" class="lbl" fill="#8593a4">Grad-CAM</text>
+  <line x1="192" y1="400" x2="492" y2="400" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="192" y1="400" x2="466.3" y2="400" stroke="#f7931e" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="466.3" cy="400" r="6" fill="#f7931e"/>
+  <text x="508" y="404" class="val" fill="#8593a4">0.962</text>
+  <line x1="192" y1="410" x2="492" y2="410" stroke="#242d38" stroke-width="1"/>
+  <text x="192" y="422" class="ax" fill="#4a5765">0.930</text>
+  <text x="492" y="422" class="ax" text-anchor="end" fill="#4a5765">0.965</text>
+  <text x="606" y="300" class="pt" fill="#e9eff6">AOPC ↑</text>
+  <text x="606" y="317" class="pn" fill="#4a5765">higher is better · area over the perturbation curve</text>
+  <text x="606" y="350" class="lbl" fill="#e9eff6">Attention-Rollout</text>
+  <line x1="758" y1="346" x2="1058" y2="346" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="758" y1="346" x2="1031.3" y2="346" stroke="#7c5cff" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="1031.3" cy="346" r="10" fill="none" stroke="#7c5cff" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="1031.3" cy="346" r="6" fill="#7c5cff"/>
+  <text x="1074" y="350" class="val" fill="#e9eff6">0.041</text>
+  <text x="606" y="377" class="lbl" fill="#8593a4">Integrated Gradients</text>
+  <line x1="758" y1="373" x2="1058" y2="373" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="758" y1="373" x2="838.0" y2="373" stroke="#22b8cf" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="838.0" cy="373" r="6" fill="#22b8cf"/>
+  <text x="1074" y="377" class="val" fill="#8593a4">0.012</text>
+  <text x="606" y="404" class="lbl" fill="#e9eff6">Grad-CAM</text>
+  <line x1="758" y1="400" x2="1058" y2="400" stroke="#1c242e" stroke-width="6" stroke-linecap="round"/>
+  <line x1="758" y1="400" x2="1031.3" y2="400" stroke="#f7931e" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+  <circle cx="1031.3" cy="400" r="10" fill="none" stroke="#f7931e" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="1031.3" cy="400" r="6" fill="#f7931e"/>
+  <text x="1074" y="404" class="val" fill="#e9eff6">0.041</text>
+  <line x1="758" y1="410" x2="1058" y2="410" stroke="#242d38" stroke-width="1"/>
+  <text x="758" y="422" class="ax" fill="#4a5765">0.000</text>
+  <text x="1058" y="422" class="ax" text-anchor="end" fill="#4a5765">0.045</text>
+</svg>
