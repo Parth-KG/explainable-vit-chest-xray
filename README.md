@@ -41,7 +41,7 @@ The headline finding is not the accuracy — it is that the three explanation me
 
 ## Results
 
-> Held-out test set (435 images, balanced across the three classes).
+> Held-out test set: 435 images, 145 per class. All numbers here come from the pre-split dataset AIMS-DTU provided for the selection round (3,000 train / 600 validation / 435 test, balanced), which isn't included in this repository. Trained on the public COVID-19 Radiography Database instead, the loader makes its own 70/15/15 split and the numbers will differ.
 
 | Metric | Accuracy | Precision (macro) | Recall (macro) | F1 (macro) |
 |:------:|:--------:|:-----------------:|:--------------:|:----------:|
@@ -61,10 +61,10 @@ Per-class F1: COVID 98.95% · Normal 98.64% · Viral Pneumonia 98.96%. Only 5 of
   <img alt="Faithfulness of three attribution methods across four metrics" src="figures/faithfulness-light.svg" width="100%">
 </picture>
 
-Attention-Rollout and Grad-CAM are near-tied. Integrated Gradients wins insertion and produces the sparsest maps, but trails badly on AOPC. On a blur baseline there is no clear winner — which sets up the next result.
+These scores, and the baseline study below, are averaged over the first 20 test images. The test set is ordered by class and not shuffled, so all 20 are COVID-19 cases; treat them as COVID-only results. Attention-Rollout and Grad-CAM are near-tied. Integrated Gradients wins insertion and produces the sparsest maps, but trails badly on AOPC. On a blur baseline there is no clear winner — which sets up the next result.
 
 <details>
-<summary>Exact values (mean over 20 test images, blur baseline)</summary>
+<summary>Exact values (mean over 20 test images, all COVID-19, blur baseline)</summary>
 
 <br>
 
@@ -132,7 +132,7 @@ The curves show what the summary numbers hide: the three methods sit almost on t
 
 ### Option A — Google Colab (recommended)
 
-Open the notebook badge above, set the runtime to **GPU**, upload the dataset, and run the cells top to bottom. The loader auto-detects the dataset structure and prints it for you to confirm before training.
+Open the notebook badge above and set the runtime to **GPU**. The first cell clones this repository. Upload your dataset as a zip through Colab's Files panel, check the `root` path in step 4, then run the cells top to bottom. The loader auto-detects the dataset structure and prints it for you to confirm before training.
 
 ### Option B — Local
 
@@ -202,7 +202,7 @@ Near-perfect accuracy on aggregated COVID X-ray datasets can reflect source-spec
 
 The saliency figure above makes that caveat concrete rather than theoretical. Images in this dataset carry burned-in annotations, and Grad-CAM places strong activation on exactly those marks — an arrow and a `day 13` label — while giving comparatively little weight to the lung fields. Border activation appears across every sampled image. One example does not prove the classifier depends on annotation, and these attribution maps are not calibrated to establish that. But annotation style correlates with source and source correlates with label, so it is the first thing to rule out, not the last.
 
-A further caveat on the qualitative figure: `run.py explain` samples the first images from the test loader, so all six happen to be COVID cases. A per-class strip would be more representative.
+A further caveat on sampling: `run.py explain`, `xai-eval` and `bonus` all take the first images from the unshuffled test loader, so the six saliency figures and the 20 images behind the faithfulness and baseline numbers are all COVID cases. Sampling evenly across classes would make those results representative of the whole task.
 
 Natural next steps: validate saliency against the dataset's lung masks (IoU) to test the annotation hypothesis directly, add the sanity checks of Adebayo et al., implement a ROAD baseline, and scale the explainability evaluation across more images and seeds.
 
